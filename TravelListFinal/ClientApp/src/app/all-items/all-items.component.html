@@ -1,0 +1,30 @@
+<div *ngFor="let cat of listcategories">
+  <br /> <h2>{{cat.category}}</h2>
+
+  <div *ngFor="let itemobj of listofitems">
+    <ng-container *ngIf="itemobj.itemcategory == cat.category">
+      {{itemobj.itemname}}
+    </ng-container>
+    <br />
+
+  </div>
+</div>
+
+
+
+
+<!--
+<h2>Beach</h2>
+<div *ngFor="let itemobj of listofitems">
+  <ng-container *ngIf='itemobj.itemcategory == "beach"'>
+    {itemobj.itemname}}
+  </ng-container>
+</div>
+<br />
+
+<h2>Flight</h2>
+<div *ngFor="let itemobj of listofitems">
+  <ng-container *ngIf='itemobj.itemcategory == "flight"'>
+    {itemobj.itemname}}
+  </ng-container>
+</div> -->

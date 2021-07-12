@@ -1,0 +1,22 @@
+
+<<<<<<< HEAD
+<input type="text" id="user" value="{{curUser}}" #user />
+<button type="button" (click)="findCurUser(user.value)"> Find </button>
+<br />
+<br />
+
+userlistworks
+<div *ngFor="let list of lists; index as i">
+  <span *ngIf="list.username == curUser">
+    <button type="button" (click)="selectList(list.userlistsId)"> {{ list.userlisttitle }} </button>
+  </span>
+</div>
+
+<br />
+<app-current-list [currentListId]="currentListId"></app-current-list>
+=======
+
+<div *ngFor="let list of lists; index as i">
+    {{ list.userlistsId }} {{ list.username }} {{ list.userlisttitle }} 
+</div>
+>>>>>>> 0a497ea38dff774a2a0ad37d75cbdb9826d47a2e

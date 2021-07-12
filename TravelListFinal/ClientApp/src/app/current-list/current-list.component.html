@@ -1,0 +1,11 @@
+
+<br />
+<br />
+<div *ngFor="let item of list; index as i">
+  <span *ngIf="item.userlistsId == currentListId">
+    {{ item.itemname }}
+  </span>
+</div>
+<input type="text" id="newItem" value="New Item" #newItem />
+<input type="text" id="newItemCat" value="New Item Category" #newItemCat />
+<button type="button" (click)="addNewItem(newItem.value, newItemCat.value)"> Add Item </button>
